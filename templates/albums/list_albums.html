@@ -10,6 +10,12 @@
     <div>
       <h2><a href="{% url 'view_album' pk=album.pk  %}">{{ album.title }}</h2>
         </div>
+
+    {% if album in favorite_albums %}
+    <h1>Favorite</h1>
+    {% endif %}
+
+
         {% endfor %}
         
         </div>
